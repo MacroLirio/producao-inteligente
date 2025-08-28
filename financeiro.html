@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produção Inteligente • Financeiro</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <strong>Produção Inteligente</strong>
+    <nav>
+      <a href="dashboard.html">Projetos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <button id="btn-sair">Sair</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Financeiro (apenas Admin)</h1>
+
+    <form id="form-financeiro" class="card">
+      <div class="grid3">
+        <div><label>Projeto</label><input id="fin-projeto" required/></div>
+        <div><label>Proponente</label><input id="fin-proponente" required/></div>
+        <div><label>Valor Pago (R$)</label><input id="fin-valor" type="number" required/></div>
+      </div>
+      <div class="grid3">
+        <div><label>% do valor recebido</label><input id="fin-percentual" type="number" required/></div>
+        <div><label>Data do cadastro</label><input id="fin-data" type="date" required/></div>
+      </div>
+      <button type="submit">Salvar</button>
+    </form>
+
+    <section id="financeiro-lista"></section>
+
+    <div class="actions">
+      <button id="fin-export-excel" class="btn-outline">Exportar Excel</button>
+      <button id="fin-export-pdf" class="btn-outline">Exportar PDF</button>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="app-auth.js"></script>
+  <script type="module" src="app-dados.js"></script>
+</body>
+</html>
 
