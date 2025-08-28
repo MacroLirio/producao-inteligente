@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produção Inteligente • Projetos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <strong>Produção Inteligente</strong>
+    <nav>
+      <a href="dashboard.html">Projetos</a>
+      <a href="financeiro.html" id="menu-financeiro">Financeiro</a>
+      <button id="btn-sair">Sair</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Projetos</h1>
+
+    <!-- Abas -->
+    <div class="tabs">
+      <button class="tab active" data-fluxo="inscricao">Inscrição</button>
+      <button class="tab" data-fluxo="captacao">Captação/Aprovação</button>
+      <button class="tab" data-fluxo="execucao">Execução</button>
+      <button class="tab" data-fluxo="prestacao">Prestação de Contas</button>
+      <button class="tab" data-fluxo="finalizado">Finalizados</button>
+    </div>
+
+    <!-- INSCRIÇÃO -->
+    <section id="sec-inscricao" class="tabpane active">
+      <button id="btn-toggle-form" class="btn-outline">+ Novo Projeto</button>
+      <form id="form-inscricao" class="card" style="display:none">
+        <h3>NOVO PROJETO (Inscrição)</h3>
+        <div class="grid2">
+          <div>
+            <label>Nome do Projeto</label><input id="p-nome" required/>
+            <label>Proponente</label><input id="p-proponente" required/>
+            <label>Edital</label><input id="p-edital"/>
+            <label>Atividades propostas</label><textarea id="p-ativ"></textarea>
+          </div>
+          <div>
+            <label>Cidade</label><input id="p-cidade"/>
+            <label>Estado</label><input id="p-estado"/>
+            <label>Bairro</label><input id="p-bairro"/>
+            <label>Cronograma (inscrito)</label><textarea id="p-crono"></textarea>
+          </div>
+        </div>
+
+        <h4>Planilha de Custos</h4>
+        <div id="planilha-area" class="card" style="padding:12px">
+          <div class="grid3 plan-row">
+            <input class="rubrica" placeholder="Rubrica"/>
+            <input class="valor" type="number" placeholder="Valor"/>
+            <button type="button" class="btn-secundario btn-add-rubrica">Adicionar linha</button>
+          </div>
+        </div>
+        <div class="grid3">
+          <div>
+            <label>Valor geral da(s) rubrica(s)</label>
+            <input id="p-valorRubrica" type="number"/>
+          </div>
+          <div>
+            <label>Valor geral do projeto</label>
+            <input id="p-valorProjeto" type="number"/>
+          </div>
+        </div>
+        <button type="submit">Salvar</button>
+      </form>
+
+      <section id="lista-inscricao"></section>
+      <div class="actions">
+        <button id="export-inscricao-excel" class="btn-outline">Exportar Excel</button>
+        <button id="export-inscricao-pdf" class="btn-outline">Exportar PDF</button>
+      </div>
+    </section>
+
+    <!-- CAPTAÇÃO -->
+    <section id="sec-captacao" class="tabpane">
+      <section id="lista-captacao"></section>
+      <div class="actions">
+        <button id="export-captacao-excel" class="btn-outline">Exportar Excel</button>
+        <button id="export-captacao-pdf" class="btn-outline">Exportar PDF</button>
+      </div>
+    </section>
+
+    <!-- EXECUÇÃO -->
+    <section id="sec-execucao" class="tabpane">
+      <section id="lista-execucao"></section>
+      <div class="actions">
+        <button id="export-execucao-excel" class="btn-outline">Exportar Excel</button>
+        <button id="export-execucao-pdf" class="btn-outline">Exportar PDF</button>
+      </div>
+    </section>
+
+    <!-- PRESTAÇÃO -->
+    <section id="sec-prestacao" class="tabpane">
+      <section id="lista-prestacao"></section>
+      <div class="actions">
+        <button id="export-prestacao-excel" class="btn-outline">Exportar Excel</button>
+        <button id="export-prestacao-pdf" class="btn-outline">Exportar PDF</button>
+      </div>
+    </section>
+
+    <!-- FINALIZADOS -->
+    <section id="sec-finalizado" class="tabpane">
+      <section id="lista-finalizado"></section>
+      <div class="actions">
+        <button id="export-finalizado-excel" class="btn-outline">Exportar Excel</button>
+        <button id="export-finalizado-pdf" class="btn-outline">Exportar PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- libs PDF/Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Scripts do app -->
+  <script type="module" src="app-auth.js"></script>
+  <script type="module" src="app-dados.js"></script>
+</body>
+</html>
 
