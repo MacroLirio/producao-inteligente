@@ -1,1 +1,36 @@
+:root{
+  --bg:#f5f7fa; --card:#fff; --primary:#0b4a54; --primary2:#0f6a79;
+  --txt:#1f2937; --muted:#6b7280; --shadow:0 6px 18px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--txt)}
+header{background:var(--primary);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+header nav a, header nav button{margin-left:10px;color:#fff;text-decoration:none;background:none;border:none;cursor:pointer;font-weight:bold}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.grid2{grid-template-columns:1fr 1fr}}
+.grid3{display:grid;grid-template-columns:1fr;gap:12px;align-items:end}
+@media(min-width:900px){.grid3{grid-template-columns:1fr 1fr 1fr}}
+label{display:block;font-size:14px;margin:8px 0 6px;color:var(--muted)}
+input,textarea,select{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px}
+button{padding:10px 14px;border:0;border-radius:8px;background:var(--primary);color:#fff;cursor:pointer}
+button:hover{background:var(--primary2)}
+.btn-outline{background:#fff;color:var(--primary);border:1px solid var(--primary)}
+.btn-outline:hover{background:#f0fafa}
+.btn-secundario{background:#6b7280}
+#msg{display:none;padding:12px;border-radius:8px;margin:10px 0}
+.tabs{display:flex;gap:10px;margin:10px 0;flex-wrap:wrap}
+.tab{background:#e6f1f3;color:#0b4a54;border:1px solid #bfe1e7;padding:8px 12px;border-radius:8px;cursor:pointer}
+.tab.active{background:#0b4a54;color:#fff}
+.tabpane{display:none}
+.tabpane.active{display:block}
+.item{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:10px 0;background:#fff}
+.item h4{margin:0 0 6px 0;color:#0b4a54}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef6f7;color:#0b4a54;font-size:12px;margin-left:6px}
+.actions{margin:14px 0}
+small{color:#6b7280}
+.hint{color:#6b7280;font-size:12px;margin-top:8px}
 
