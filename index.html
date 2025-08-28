@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Produção Inteligente</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produção Inteligente • Login</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Funcionou! 🚀</h1>
-  <p>Seu site no GitHub Pages está ativo.</p>
+  <header>Produção Inteligente</header>
+  <main class="wrap">
+    <div id="msg"></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Entrar</h3>
+        <label>E-mail</label>
+        <input id="login-email" type="email" placeholder="voce@email.com" />
+        <label>Senha</label>
+        <input id="login-senha" type="password" placeholder="******" />
+        <button id="btn-entrar">Entrar</button>
+        <button id="btn-esqueci" class="btn-secundario">Esqueci a senha</button>
+        <p class="hint">As contas (admin e usuários) são cadastradas no Firebase → Authentication.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="app-auth.js"></script>
 </body>
 </html>
